@@ -96,6 +96,8 @@ function playGame() {
     if (humanScore > computerScore) {
         console.log(`The final score was ${humanScore} to ${computerScore}.`)
         console.log("You Win! 🏆");
+    } else if (humanScore == computerScore) {
+        console.log("Nobody wins. You both SUCK!")
     } else {
         console.log(`The final score was ${humanScore} to ${computerScore}.`)
         console.log("Computer Wins! 😿");
