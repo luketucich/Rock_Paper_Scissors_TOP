@@ -1,0 +1,104 @@
+html,body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+body {
+    background-color: #435058;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Area */
+.header {
+    background-color: #354046;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+}
+
+.text {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+#rpsTitle {
+    font-size: 60px;
+    font-weight: 600;
+    color: #ff5384;
+    /* text-shadow: 3px 3px #db0340; */
+}
+
+#author {
+    font-size: 15px;
+    font-weight: 100;
+    color: #F1F2EE;
+}
+/*  */
+
+/* Info and Scoreboard */
+.playArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1 1 auto;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+}
+
+.playerVsComputer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.scoreboard {
+    display: flex;
+    flex: 0;
+    justify-content: center;
+    gap: 50px;
+    background-color: #ff5384;
+}
+/*  */
+
+
+/* Button Area */
+.buttonArea {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #354046;
+}
+
+#buttonText {
+    font-size: 25px;
+    font-weight: 600;
+    color: #F1F2EE;
+}
+
+.buttonContainer{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.selectionButton {
+    padding: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #FF779E;
+    /* box-shadow: 5px 5px #db0340; */
+    font-size: 50px;
+}
+
+.selectionButton:hover {
+    background-color: #ff5384;
+}
+/*  */

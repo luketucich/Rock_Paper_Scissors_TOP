@@ -1,4 +1,8 @@
-// Randomly assigns a choice to the computer
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3);
     if (computerChoice == 0) {
@@ -10,17 +14,10 @@ function getComputerChoice() {
     }
 }
 
-// // Prompts the player with their choice
-// // function getHumanChoice() {
-// //     let humanChoice = prompt("Rock, Paper, or Scissors?");
-// //     return humanChoice.toLowerCase();
-// }
-
-// Assigns a variable to the human and computer's choice.
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-
+function getHumanChoice() {
+    let humanChoice = ("Rock, Paper, or Scissors?");
+    return humanChoice.toLowerCase();
+}
 function playRound(humanChoice, computerChoice) {
     // H-Rock vs C-Paper
     if (humanChoice == "rock" && computerChoice == "paper") {
@@ -58,23 +55,3 @@ function playRound(humanChoice, computerChoice) {
     }
     return
 }
-
-// As you may have guessed, this sets the initial scores to 0.
-let humanScore = 0;
-let computerScore = 0;
-
-
-//     // Announces the winner of the game.
-//     if (humanScore > computerScore) {
-//         console.log(`The final score was ${humanScore} to ${computerScore}.`)
-//         console.log("You Win! 🏆");
-//     } else if (humanScore == computerScore) {
-//         console.log("Tie game! 🤝")
-//     } else {
-//         console.log(`The final score was ${humanScore} to ${computerScore}.`)
-//         console.log("Computer Wins! 😿");
-//     }
-// }
-
-// Runs the game!
-playGame();
