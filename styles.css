@@ -42,11 +42,12 @@ body {
 .playArea {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     flex: 1 1 auto;
 }
 
 .information {
+    margin: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -54,7 +55,14 @@ body {
 .playerVsComputer {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
+}
+
+.choiceBox {
+    background-color: #ff5384;
+    padding: 50px;
+    border-radius: 30px;
 }
 
 .scoreboard {
@@ -64,15 +72,34 @@ body {
     gap: 50px;
     background-color: #ff5384;
 }
+
+.pcText {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    color:#F1F2EE;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.pcButton {
+    padding: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 0;
+    border-radius: 100px;
+    background-color: #354046;
+    font-size: 50px;
+}
+
+.pcEmojis {
+
+}
 /*  */
 
 
 /* Button Area */
-.buttonArea {
-    margin-top: auto;
-    padding: 10px;
-    background-color: #354046;
-}
 
 #buttonText {
     font-size: 25px;
@@ -81,7 +108,8 @@ body {
 }
 
 .buttonContainer{
-    margin-top: 5px;
+    padding: 10px;
+    background-color: #354046;
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -93,12 +121,11 @@ body {
     padding-right: 40px;
     border: 0;
     border-radius: 100px;
-    background-color: #FF779E;
-    /* box-shadow: 5px 5px #db0340; */
+    background-color: #ff5384;
     font-size: 50px;
 }
 
 .selectionButton:hover {
-    background-color: #ff5384;
+    background-color: #FF779E;
 }
 /*  */
