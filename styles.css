@@ -33,7 +33,7 @@ body {
 
 #author {
     font-size: 15px;
-    font-weight: 100;
+    font-weight: 200;
     color: #F1F2EE;
 }
 /*  */
@@ -80,7 +80,7 @@ body {
     margin: 0;
     color:#F1F2EE;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .pcButton {
@@ -91,20 +91,22 @@ body {
     border-radius: 100px;
     background-color: #354046;
     font-size: 50px;
+    box-shadow: 3px 3px #22282c;
 }
 
-.pcEmojis {
-
-}
 /*  */
 
 
 /* Button Area */
 
-#buttonText {
+#roundResult, #rulesText, #vsText, #weaponText {
     font-size: 25px;
     font-weight: 600;
     color: #F1F2EE;
+}
+
+#rulesText {
+    color: #fda8c0;
 }
 
 .buttonContainer{
@@ -123,9 +125,11 @@ body {
     border-radius: 100px;
     background-color: #ff5384;
     font-size: 50px;
+    box-shadow: 3px 3px #94002a;
 }
 
 .selectionButton:hover {
     background-color: #FF779E;
+    cursor: grab;
 }
 /*  */

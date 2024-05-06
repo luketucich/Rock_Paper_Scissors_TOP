@@ -16,67 +16,87 @@ function getComputerChoice() {
 }
 // 
 
-// Upon clicking, the player's choice is updated and a round is played."
-let playerChoice
 
+// 
+let playerChoice
+let roundResult
+let emoji
+const buttonClick = new Audio("buttonClick.mp3");
+// 
+
+// Upon clicking the buttons, a round is played
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
+        buttonClick.play();
         playerChoice = button.id;
         playRound(playerChoice, getComputerChoice());
     });
 });
 // 
 
+// Returns the player's choice as an emoji
+function playerChoiceEmoji(playerChoice) {
+    if (playerChoice == "paper") {
+        return ("📄");
+    } else if (playerChoice == "rock") {
+        return ("🪨");
+    } else {
+        return ("✂️");
+    }
+}
+// 
+
 // The logic for a round
 function playRound(playerChoice, computerChoice) {
     // H-Rock vs C-Paper
     if (playerChoice == "rock" && computerChoice == "paper") {
-        console.log("You lose! 📄 beats 🪨!");
+        roundResult = ("You lose! 📄 beats 🪨");
         computerScore = computerScore + 1;
 
         // H-Rock vs C-Scissors
     } else if (playerChoice == "rock" && computerChoice == "scissors") {
-        console.log("You win! 🪨 beats ✂️!");
+        roundResult = ("You win! 🪨 beats ✂️");
         playerScore = playerScore + 1;
 
         // H = C (tie)
     } else if (playerChoice == computerChoice) {
-        console.log(`Tie! You both picked ${playerChoice}.`)
+        roundResult = (`Tie! You both picked ${playerChoiceEmoji(playerChoice)}.`)
 
         // H-Scissors vs C-Rock
     } else if (playerChoice == "scissors" && computerChoice == "rock") {
-        console.log("You lose! 🪨 beats ✂️!");
+        roundResult = ("You lose! 🪨 beats ✂️");
         computerScore = computerScore + 1;
 
         // H-Scissors vs C-Paper
     } else if (playerChoice == "scissors" && computerChoice == "paper") {
-        console.log("You win! ✂️ beats 📄!");
+        roundResult = ("You win! ✂️ beats 📄");
         playerScore = playerScore + 1;
 
         // H-Paper vs C-Rock
     } else if (playerChoice == "paper" && computerChoice == "rock") {
-        console.log("You win! 📄 beats 🪨!");
+        roundResult = ("You win! 📄 beats 🪨");
         playerScore = playerScore + 1;
 
         // H-Paper vs C-Scissors
     } else if (playerChoice == "paper" && computerChoice == "scissors") {
-        console.log("You lose! ✂️ beats 📄!");
+        roundResult = ("You lose! ✂️ beats 📄");
         computerScore = computerScore + 1;
     }
     document.getElementById("playerScore").textContent = `${playerScore}`;
     document.getElementById("computerScore").textContent = `${computerScore}`;
+    document.getElementById("roundResult").textContent = `${roundResult}`;
 
-    // if (playerScore == 3) {
-    //     alert(`You win! The final score was ${playerScore} to ${computerScore}.`);
-    //     playerScore = 0;
-    //     computerScore = 0;
-    //     console.clear();
-    // } else if (computerScore == 3) {
-    //     alert(`You lose! The final score was ${playerScore} to ${computerScore}.`);
-    //     playerScore = 0;
-    //     computerScore = 0;
-    //     console.clear();
-    // }
+    if (playerScore == 3) {
+        alert(`You win! The final score was ${playerScore} to ${computerScore}.`);
+        playerScore = 0;
+        computerScore = 0;
+        console.clear();
+    } else if (computerScore == 3) {
+        alert(`You lose! The final score was ${playerScore} to ${computerScore}.`);
+        playerScore = 0;
+        computerScore = 0;
+        console.clear();
+    }
 }
 // 
