@@ -43,6 +43,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     flex: 1 1 auto;
 }
 
@@ -65,7 +66,7 @@ body {
     border-radius: 30px;
 }
 
-.scoreboard {
+.chooseWeaponText {
     display: flex;
     flex: 0;
     justify-content: center;
@@ -92,13 +93,14 @@ body {
     background-color: #354046;
     font-size: 50px;
     box-shadow: 3px 3px #22282c;
+
+
 }
 
 /*  */
 
 
 /* Button Area */
-
 #roundResult, #rulesText, #vsText, #weaponText {
     font-size: 25px;
     font-weight: 600;
@@ -126,6 +128,12 @@ body {
     background-color: #ff5384;
     font-size: 50px;
     box-shadow: 3px 3px #94002a;
+}
+
+#playAgain {
+    color: #F1F2EE;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
 }
 
 .selectionButton:hover {

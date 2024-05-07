@@ -25,10 +25,11 @@
 
     <div class="playArea">
         <div class="information">
-            <p class="text" id="rulesText">First to three points wins 🏆</p>
+            <p class="text" id="rulesText">Best of Five Rounds</p>
             <p class="text" id="roundResult">Good Luck!</p>
         </div>
-        <div class="playerVsComputer">
+        <div id="mainArea"></div>
+        <div class="playerVsComputer" id="playArea">
             <div>
                 <div class="pcButton">👤</div>
                 <div class="pcText">Player</div>
@@ -41,20 +42,21 @@
                 <div class="pcText" id="computerScore">0</div>
             </div>
         </div>
-        <div class="scoreboard">
-            <div class="text" id="weaponText">Choose Your Weapon</div>
+        <div id="spacingPlaceHolder">
+            <div></div>
         </div>
     </div>
 
-
-    <div class="buttonContainer">
-        <button class="selectionButton" id="rock">🪨</button>
-        <button class="selectionButton" id="paper">📄</button>
-        <button class="selectionButton" id="scissors">✂️</button>
+    <div id="chooseWeaponArea">
+        <div class="chooseWeaponText">
+            <div class="text" id="weaponText">Choose Your Weapon</div>
+        </div>
+        <div class="buttonContainer">
+            <button class="selectionButton" id="rock">🪨</button>
+            <button class="selectionButton" id="paper">📄</button>
+            <button class="selectionButton" id="scissors">✂️</button>
+        </div>
     </div>
-
-
-
 
 </body>
 
