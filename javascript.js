@@ -27,6 +27,7 @@ const mainArea = document.getElementById("mainArea");
 const buttonClick = new Audio("Sounds/buttonClick.mp3");
 const winSound = new Audio("Sounds/winSound.mp3");
 const loseSound = new Audio("Sounds/loseSound.wav");
+const tieSound = new Audio("Sounds/tieSound.wav");
 // 
 
 // Creates the "Play Again" Button
@@ -117,6 +118,12 @@ function playRound(playerChoice, computerChoice) {
     } else if (roundCount == 5 && computerScore > playerScore) {
         loseSound.play();
         document.getElementById("roundResult").textContent = `Computer won the game! 😥`;
+        document.getElementById("rulesText").textContent = `Final Score: ${playerScore} - ${computerScore} `;
+        playArea.remove();
+        mainArea.appendChild(playAgain);
+    } else if (roundCount == 5 && computerScore == playerScore) {
+        tieSound.play();
+        document.getElementById("roundResult").textContent = `It's a tie game. 🤝`;
         document.getElementById("rulesText").textContent = `Final Score: ${playerScore} - ${computerScore} `;
         playArea.remove();
         mainArea.appendChild(playAgain);
